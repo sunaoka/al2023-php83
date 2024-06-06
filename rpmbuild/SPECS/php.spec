@@ -9,12 +9,12 @@
 #
 
 # API/ABI check
-%global apiver      20220829
-%global zendver     20220829
+%global apiver      20230831
+%global zendver     20230831
 %global pdover      20170320
 
 # Amazon defined global variables
-%global phpver 8.2
+%global phpver 8.3
 %global phpname php%{phpver}
 
 # we don't want -z defs linker flag
@@ -24,7 +24,7 @@
 %global _hardened_build 1
 
 # version used for php embedded library soname
-%global embed_version 8.2
+%global embed_version 8.3
 
 %global mysql_sock %(mysql_config --socket 2>/dev/null || echo /var/lib/mysql/mysql.sock)
 
@@ -84,7 +84,7 @@
 %bcond_with      imap
 %bcond_without   lmdb
 
-%global upver        8.2.18
+%global upver        8.3.7
 #global rcver        RC1
 
 Summary: PHP scripting language for creating dynamic web sites
@@ -858,7 +858,6 @@ cp TSRM/LICENSE TSRM_LICENSE
 cp Zend/asm/LICENSE BOOST_LICENSE
 cp sapi/fpm/LICENSE fpm_LICENSE
 cp ext/mbstring/libmbfl/LICENSE libmbfl_LICENSE
-cp ext/fileinfo/libmagic/LICENSE libmagic_LICENSE
 cp ext/bcmath/libbcmath/LICENSE libbcmath_LICENSE
 cp ext/date/lib/LICENSE.rst timelib_LICENSE
 
@@ -1551,7 +1550,6 @@ systemctl try-restart php-fpm.service >/dev/null 2>&1 || :
 %files common -f files.common
 %doc EXTENSIONS NEWS UPGRADING* README.REDIST.BINS *md docs
 %license LICENSE TSRM_LICENSE ZEND_LICENSE BOOST_LICENSE
-%license libmagic_LICENSE
 %license timelib_LICENSE
 %doc php.ini-*
 %config(noreplace) %{_sysconfdir}/php.ini
@@ -1691,6 +1689,9 @@ systemctl try-restart php-fpm.service >/dev/null 2>&1 || :
 
 
 %changelog
+* Thu Jun 06 2024 SUNAOKA Norifimi <sunaoka@pocari.org> - 8.3.7-1.amzn2023.0.1
+- Package updated to 8.3.7
+
 * Tue May 07 2024 Avinash Koya <akoya@amazon.com> - 8.2.18-1.amzn2023.0.1
 - Package updated to 8.2.18
 
