@@ -2,7 +2,7 @@
 ARG PLATFORM
 FROM --platform=$PLATFORM public.ecr.aws/amazonlinux/amazonlinux:2023 as base
 
-RUN <<EOT
+RUN <<EOT sh -ex
   dnf groupinstall -y 'Development Tools'
   dnf install -y rpm-build
   dnf swap -y gnupg2-minimal gnupg2-full

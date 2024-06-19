@@ -1,4 +1,4 @@
-PHP_VERSION := 8.3.7
+PHP_VERSION := 8.3.8
 
 IMAGE := php$(PHP_VERSION)-builder
 

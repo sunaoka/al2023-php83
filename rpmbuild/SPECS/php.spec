@@ -84,7 +84,7 @@
 %bcond_with      imap
 %bcond_without   lmdb
 
-%global upver        8.3.7
+%global upver        8.3.8
 #global rcver        RC1
 
 Summary: PHP scripting language for creating dynamic web sites
@@ -1689,6 +1689,9 @@ systemctl try-restart php-fpm.service >/dev/null 2>&1 || :
 
 
 %changelog
+* Fri Jun 07 2024 SUNAOKA Norifimi <sunaoka@pocari.org> - 8.3.8-1.amzn2023.0.1
+- Package updated to 8.3.8
+
 * Thu Jun 06 2024 SUNAOKA Norifimi <sunaoka@pocari.org> - 8.3.7-1.amzn2023.0.1
 - Package updated to 8.3.7
 
@@ -3751,4 +3754,3 @@ systemctl try-restart php-fpm.service >/dev/null 2>&1 || :
 - add patch to prevent clobbering struct re_registers from regex.h
 - remove domxml references, replaced with dom now built-in
 - fix php.ini to refer to php5 not php4
-
