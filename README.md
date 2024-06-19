@@ -35,3 +35,13 @@ RPMs are available on the [Release](https://github.com/sunaoka/al2023-php83/rele
 | php8.3-tidy     | Standard PHP 8.3 module provides tidy library support                   |
 | php8.3-xml      | A module for PHP 8.3 applications which use XML                         |
 | php8.3-zip      | ZIP archive management extension                                        |
+
+## PHP 8.3 PECL Packages
+
+| Package                        | Summary                                       |
+| ------------------------------ | --------------------------------------------- |
+| [php8.3-pecl-apcu][apcu]       | APCu - APC User Cache                         |
+| [php8.3-pecl-imagick][imagick] | Provides a wrapper to the ImageMagick library |
+
+[apcu]: https://github.com/sunaoka/al2023-php-pecl-apcu
+[imagick]: https://github.com/sunaoka/al2023-php-pecl-imagick
