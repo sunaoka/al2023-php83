@@ -1,3 +1,8 @@
+> [!CAUTION]
+> # Deprecated
+> ## PHP 8.3 is now supported on Amazon Linux 2023.5.20240624.0.
+> ### See you next in PHP 8.4!
+
 # PHP 8.3 RPM for Amazon Linux 2023
 
 RPMs are available on the [Release](https://github.com/sunaoka/al2023-php83/releases) page.
